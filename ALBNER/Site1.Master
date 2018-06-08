@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site1.master.cs" Inherits="ALBNER.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link rel="stylesheet" href="/Content/bootstrap.css" media="screen">
+        <link rel="stylesheet" href="/Content/Site.css" media="screen">
+        <script src="/scripts/jquery-1.3.2.min.js" type="text/javascript"></script>
+        <script src="/scripts/jquery.blockUI.js" type="text/javascript"></script>
+        <script src="/scripts/bootstrap.js" type="text/javascript"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Aplikacioni i Etiketuesve</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/ner/News.aspx">Lajmet</a></li>
+                        
+                    </ul>
+                    
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Register">Regjistrohu</a></li>
+                                <li><a runat="server" href="~/Account/Login">Identifikohu</a></li>
+                            </ul>
+                        
+                           <%-- <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Manage" title=" ">Pershendetje, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log out" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>--%>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <span>&copy; <%: DateTime.Now.Year %> - FSHN, Dallimi i Entiteteve te Emeruara ne Shqip</span>
+            </footer>
+        </div>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
