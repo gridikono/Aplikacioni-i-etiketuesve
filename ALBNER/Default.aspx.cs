@@ -22,8 +22,7 @@ namespace ALBNER
         {
             if (txtPassword.Text.ToLower() == "secret")
             {
-                FormsAuthentication.RedirectFromLoginPage(
-                  txtName.Text, false);
+                FormsAuthentication.RedirectFromLoginPage(txtName.Text, false);
             }
             else
             {
